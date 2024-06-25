@@ -148,7 +148,6 @@ def main():
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=args.epoches//10, gamma=args.gamma)
     #-------------------------------------------------------------------------------
     if args.flag_test == 'test':
-        color_matrix = prepare_colormap(args.dataset)
         model.eval()
         model.load_state_dict(torch.load('./results/model.pkl'))
         pre_u = test_epoch(model, label_test_loader)
