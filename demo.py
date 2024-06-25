@@ -155,7 +155,7 @@ def main():
         color_matrix = prepare_colormap(args.dataset)
         model.eval()
         model.load_state_dict(torch.load('./results/model.pkl'))
-        pre_u = test_epoch(model, label_true_loader)
+        pre_u = test_epoch(model, label_test_loader)
 
         prediction_matrix = np.zeros((height, width), dtype=float)
         for i in range(total_pos_true.shape[0]):
