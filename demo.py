@@ -5,13 +5,9 @@ import torch.utils.data as Data
 import torch.backends.cudnn as cudnn
 from scipy.io import savemat
 from torch import optim
-from torch.autograd import Variable
 from model import DSNet
 from utils import AvgrageMeter, accuracy, output_metric, NonZeroClipper, print_args
-from dataset import prepare_dataset, prepare_colormap
-
-import matplotlib.pyplot as plt
-from matplotlib import colors
+from dataset import prepare_dataset
 import numpy as np
 import time
 import os
