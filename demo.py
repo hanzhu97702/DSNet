@@ -80,7 +80,7 @@ def valid_epoch(model, valid_loader, criterion, optimizer):
 
             sad_loss = torch.mean(torch.acos(torch.sum(batch_data * re_unmix, dim=1)/
                         (torch.norm(re_unmix, dim=1, p=2) * torch.norm(batch_data, dim=1, p=2))))
-            loss = (1 - args.lamda) * criterion(batch_pred, batch_target) + args.lamda * sad_loss
+            loss = criterion(batch_pred, batch_target) + sad_loss
         else:
             batch_pred = model(batch_data)
             loss = criterion(batch_pred, batch_target)
