@@ -46,7 +46,18 @@ Zhu Han, Jin Yang, Lianru Gao, Zhiqiang Zeng, Bing Zhang, Jocelyn Chanussot. Dua
       pages={1-13},
       doi={10.1109/TGRS.2024.3418583}
     }
-    
+
+Licensing
+---------------------
+
+Copyright (C) 2024 Zhu Han
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.
+
 Contact Information
 ---------------------
 Zhu Han: hanzhu19@mails.ucas.ac.cn
