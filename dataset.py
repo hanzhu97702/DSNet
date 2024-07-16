@@ -4,7 +4,7 @@ import torch.utils.data as Data
 from scipy.io import loadmat
 import numpy as np
 
-def prepare_dataset(args, compute_true=1, samples_type='ratio'):
+def prepare_dataset(args, samples_type='ratio'):
     # prepare data
     if args.dataset == 'Indian':
         data = loadmat('./data/IndianPine.mat')
