@@ -32,7 +32,6 @@ python demo.py --dataset='Indian' --patches=7 --flag_test='test'
 ```
 
 # ⭐ Citation
----------------------
 
 **Please kindly cite the papers if this code is useful and helpful for your research.**
 
