@@ -7,6 +7,26 @@ This is a PyTorch implementation of the ["Dual-Branch Subpixel-Guided Network fo
 
 ![alt text](./flowchart.png)
 
+# 🌞 Overview
+
+Deep learning (DL) has been widely applied into hyperspectral image (HSI) classification owing to its promising feature learning and representation capabilities. However, limited by the spatial resolution of sensors, existing DL-based classification approaches mainly focus on pixel-level spectral and spatial information extraction through complex network architecture design, while ignoring the existence of mixed pixels in actual scenarios. To tackle this difficulty, we propose a novel dual-branch subpixel-guided network for HSI classification, called **DSNet**, which automatically integrates subpixel information and convolutional class features by introducing a deep autoencoder unmixing architecture to enhance classification performance. DSNet is capable of fully considering physically nonlinear properties within subpixels and adaptively generating diagnostic abundances in an unsupervised manner to achieve more reliable decision boundaries for class label distributions. The subpixel fusion module is designed to ensure high-quality information fusion across pixel and subpixel features, further promoting stable joint classification. Experimental results on three benchmark datasets demonstrate the effectiveness and superiority of DSNet compared with state-of-the-art DL-based HSI classification approaches.
+
+Citation
+---------------------
+
+**Please kindly cite the papers if this code is useful and helpful for your research.**
+
+Zhu Han, Jin Yang, Lianru Gao, Zhiqiang Zeng, Bing Zhang, Jocelyn Chanussot. Dual-Branch Subpixel-Guided Network for Hyperspectral Image Classification, IEEE Transactions on Geoscience and Remote Sensing, vol. 62, pp. 1-13, 2024, Art no. 5521813, doi: 10.1109/TGRS.2024.3418583.
+
+    @ARTICLE{10570241,
+      author={Han, Zhu and Yang, Jin and Gao, Lianru and Zeng, Zhiqiang and Zhang, Bing and Chanussot, Jocelyn},
+      journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+      title={Dual-Branch Subpixel-Guided Network for Hyperspectral Image Classification}, 
+      year={2024},
+      volume={62},
+      pages={1-13},
+      doi={10.1109/TGRS.2024.3418583}
+    }
     
 Contact Information
 ---------------------
