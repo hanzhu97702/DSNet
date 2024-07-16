@@ -7,9 +7,29 @@ This is a PyTorch implementation of the ["Dual-Branch Subpixel-Guided Network fo
 
 ![alt text](./flowchart.png)
 
+**DSNet** includes deep AE unmixing network, CNN-based classifier network and subpixel fusion module. The deep AE unmixing network is designed by considering a general mixing decoder with physically nonlinear constraints, and further extract useful subpixel-level abundance information from the HSI in an unsupervised manner. The CNN-based classifier network extracts the spectral-spatial information within the HSI to obtain pixel-level class features. The subpixel fusion module aims at integrating the abundance information and class features to ensure high-quality information fusion and enhance model representation capability.
+
 # 🌞 Overview
 
 Deep learning (DL) has been widely applied into hyperspectral image (HSI) classification owing to its promising feature learning and representation capabilities. However, limited by the spatial resolution of sensors, existing DL-based classification approaches mainly focus on pixel-level spectral and spatial information extraction through complex network architecture design, while ignoring the existence of mixed pixels in actual scenarios. To tackle this difficulty, we propose a novel dual-branch subpixel-guided network for HSI classification, called **DSNet**, which automatically integrates subpixel information and convolutional class features by introducing a deep autoencoder unmixing architecture to enhance classification performance. DSNet is capable of fully considering physically nonlinear properties within subpixels and adaptively generating diagnostic abundances in an unsupervised manner to achieve more reliable decision boundaries for class label distributions. The subpixel fusion module is designed to ensure high-quality information fusion across pixel and subpixel features, further promoting stable joint classification. Experimental results on three benchmark datasets demonstrate the effectiveness and superiority of DSNet compared with state-of-the-art DL-based HSI classification approaches.
+
+# 🔨 Usage
+
+### Training
+    
+* `./demo.py` is the script for training DSNet on different hyperspectral datasets. 
+
+```bash
+python demo.py --dataset='Indian' --patches=7 --flag_test='train'
+```
+
+### Testing
+
+After training DSNet, the saved model is loaded to obtain final classification results.
+
+```bash
+python demo.py --dataset='Indian' --patches=7 --flag_test='test'
+```
 
 Citation
 ---------------------
