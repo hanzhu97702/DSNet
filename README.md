@@ -25,7 +25,7 @@ python demo.py --dataset='Indian' --patches=7 --flag_test='train'
 
 ### Testing
 
-After training DSNet, the saved model is loaded to obtain final classification results.
+* After training DSNet, the saved model is loaded to obtain final classification results.
 
 ```bash
 python demo.py --dataset='Indian' --patches=7 --flag_test='test'
