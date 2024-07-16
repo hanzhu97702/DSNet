@@ -17,7 +17,7 @@ Deep learning (DL) has been widely applied into hyperspectral image (HSI) classi
 
 ### Training
     
-* `./demo.py` is the script for training DSNet on different hyperspectral datasets. 
+* `./demo.py` is the script for training DSNet on different hyperspectral datasets. The patch size can be changed according to input dataset.
 
 ```bash
 python demo.py --dataset='Indian' --patches=7 --flag_test='train'
@@ -31,7 +31,7 @@ After training DSNet, the saved model is loaded to obtain final classification r
 python demo.py --dataset='Indian' --patches=7 --flag_test='test'
 ```
 
-Citation
+# ⭐ Citation
 ---------------------
 
 **Please kindly cite the papers if this code is useful and helpful for your research.**
