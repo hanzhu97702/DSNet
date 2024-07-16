@@ -123,7 +123,7 @@ def main():
         cudnn.benchmark = True
 
     ## prepare dataset
-    label_train_loader, label_test_loader, band, height, width, num_classes, label, total_pos_true = prepare_dataset(args, compute_true=flag)
+    label_train_loader, label_test_loader, band, height, width, num_classes, label, total_pos_true = prepare_dataset(args)
     # create model
     if (args.model_name == 'conv2d_unmix':
         model = DSNet(band, num_classes, args.patches, args.model_name)
