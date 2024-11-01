@@ -15,6 +15,9 @@ Deep learning (DL) has been widely applied into hyperspectral image (HSI) classi
 
 # 🔨 Usage
 
+### Dataset
+The adopted Berlin and Augsburg datasets can be downloaded in [Google Drive Link](https://drive.google.com/drive/folders/1kjXSncSRijOEtFRKghHBWJmMn-Qjmi5t?usp=drive_link).
+
 ### Training
     
 * `./demo.py` is the script for training DSNet on different hyperspectral datasets. The patch size can be changed according to input dataset.
