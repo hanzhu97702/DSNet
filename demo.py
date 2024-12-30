@@ -123,7 +123,7 @@ def main():
         cudnn.benchmark = True
 
     ## prepare dataset
-    label_train_loader, label_test_loader, band, height, width, num_classes, label, total_pos_true = prepare_dataset(args)
+    label_train_loader, label_test_loader, label_true_loader, band, height, width, num_classes, label, total_pos_true = prepare_dataset(args)
     # create model
     if args.model_name == 'conv2d_unmix':
         model = DSNet(band, num_classes, args.patches, args.model_name)
@@ -150,7 +150,7 @@ def main():
     if args.flag_test == 'test':
         model.eval()
         model.load_state_dict(torch.load('./results/model.pkl'))
-        pre_u = test_epoch(model, label_test_loader)
+        pre_u = test_epoch(model, label_true_loader)
 
         prediction_matrix = np.zeros((height, width), dtype=float)
         for i in range(total_pos_true.shape[0]):
