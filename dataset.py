@@ -49,8 +49,8 @@ def prepare_dataset(args, samples_type='ratio'):
     # obtain train and test data
     total_pos_train, total_pos_test, total_pos_true, number_train, number_test, number_true = chooose_train_and_test_point(TR, TE, label, num_classes)
     mirror_image = mirror_hsi(height, width, band, input_normalize, patch=args.patches)
-    x_train_band, x_test_band = train_and_test_data(mirror_image, band, total_pos_train, total_pos_test, patch=args.patches)
-    y_train, y_test = train_and_test_label(number_train, number_test, num_classes)
+    x_train_band, x_test_band, x_true_band = train_and_test_data(mirror_image, band, total_pos_train, total_pos_test, patch=args.patches, true_point=total_pos_true)
+    y_train, y_test, y_true = train_and_test_label(number_train, number_test, num_classes, number_true)
     #-------------------------------------------------------------------------------
     # load data
     x_train=torch.from_numpy(x_train_band.transpose(0,3,2,1)).type(torch.FloatTensor) #[695, 200, 7, 7]
@@ -62,7 +62,12 @@ def prepare_dataset(args, samples_type='ratio'):
     y_test=torch.from_numpy(y_test).type(torch.LongTensor) # [9671]
     Label_test=Data.TensorDataset(x_test, y_test)
     label_test_loader=Data.DataLoader(Label_test,batch_size=args.batch_size,shuffle=True)
-    return label_train_loader, label_test_loader, band, height, width, num_classes, label, total_pos_true
+
+    x_true=torch.from_numpy(x_true_band.transpose(0,3,2,1)).type(torch.FloatTensor)
+    y_true=torch.from_numpy(y_true).type(torch.LongTensor)
+    Label_true=Data.TensorDataset(x_true, y_true)
+    label_true_loader=Data.DataLoader(Label_true,batch_size=args.batch_size,shuffle=False)
+    return label_train_loader, label_test_loader, label_true_loader, band, height, width, num_classes, label, total_pos_true
 
 # split dataset by training set ratio
 def split_train_data_clssnum(gt, num_classes, train_num_ratio):
