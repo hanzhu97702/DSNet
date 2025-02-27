@@ -16,7 +16,7 @@ Deep learning (DL) has been widely applied into hyperspectral image (HSI) classi
 # 🔨 Usage
 
 ### Dataset
-The adopted Berlin and Augsburg datasets can be downloaded in [Google Drive Link](https://drive.google.com/drive/folders/1kjXSncSRijOEtFRKghHBWJmMn-Qjmi5t?usp=drive_link).
+The adopted Berlin and Augsburg datasets can be downloaded in [Google Drive Link](https://drive.google.com/drive/folders/1kjXSncSRijOEtFRKghHBWJmMn-Qjmi5t?usp=drive_link) and [Baiduyun Link](https://pan.baidu.com/s/1fOzt4CJ0FQwDjGSP3DOU9w?pwd=c258) (the extracted code is c258).
 
 ### Training
     
